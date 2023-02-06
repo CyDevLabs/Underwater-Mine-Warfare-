@@ -1,4 +1,4 @@
-# Ongoing Mini-Research-Project based on Deep Learning applied to Underwater Mine Warfare 
+# [In Progress] Mini-Research-Project based on Deep Learning applied to Underwater Mine Warfare 
 Deep Learning applied to Underwater Mine Warfare
 
 
