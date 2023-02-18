@@ -54,4 +54,4 @@ The purpose of this model is also to learn a function that maps a noisy image to
 
 The loss function used in this model is binary cross-entropy, and the optimizer is Adam.
 
-**first code provided does not use a convolutional neural network (CNN), but rather a fully connected neural network (also called a dense network). The Flatten layer at the beginning of the model flattens the 3D image tensor into a 1D vector, and the subsequent Dense layers are fully connected layers that learn a function to map the noisy image to the denoised image.
+**first code provided does not use a convolutional neural network (CNN), but rather a fully connected neural network (also called a dense network). The Flatten layer at the beginning of the model flattens the 3D image tensor into a 1D vector, and the subsequent Dense layers are fully connected layers that learn a function to map the noisy image to the denoised image**
