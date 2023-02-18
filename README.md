@@ -53,3 +53,5 @@ The final layer is a Conv2D layer with 3 filters of size (3, 3), followed by ReL
 The purpose of this model is also to learn a function that maps a noisy image to a denoised image, but it does so using a CNN architecture that is more suited to image processing tasks. The Conv2D and MaxPooling2D layers allow the model to learn local features of the input image, while the UpSampling2D layers increase the spatial resolution of the feature maps. The Conv2D layers at the end of the model produce the final denoised image.
 
 The loss function used in this model is binary cross-entropy, and the optimizer is Adam.
+
+**first code provided does not use a convolutional neural network (CNN), but rather a fully connected neural network (also called a dense network). The Flatten layer at the beginning of the model flattens the 3D image tensor into a 1D vector, and the subsequent Dense layers are fully connected layers that learn a function to map the noisy image to the denoised image.
