@@ -25,3 +25,31 @@ The fourth Dense layer has 128 * 128 * 3 neurons, which is equal to the number o
 The Reshape layer reshapes the output of the previous layer into a tensor of shape (128, 128, 3), which is the same shape as the input image.
 
 The overall purpose of this model is to learn a function that maps a noisy image to a denoised image. The first layer flattens the input image into a 1D tensor, which is then passed through several fully connected layers with ReLU activations, allowing the model to learn a nonlinear function of the input. The last layer reshapes the output back into an image of the same size as the input.
+
+**DAE**
+
+The code you provided creates a Keras Sequential model that performs image denoising using a convolutional neural network (CNN). The model architecture is different from the previous one:
+
+The first layer is a Conv2D layer with 32 filters of size (3, 3). This layer applies 32 convolutional filters to the input image, with ReLU activation and 'same' padding. The input shape is (126, 126, 3), which is slightly smaller than the input shape in the previous model.
+
+The second layer is a MaxPooling2D layer that performs 2x2 max pooling with 'same' padding, reducing the spatial dimensions of the feature maps by a factor of 2.
+
+The third layer is a Conv2D layer with 64 filters of size (3, 3), followed by ReLU activation and 'same' padding.
+
+The fourth layer is another MaxPooling2D layer, with the same parameters as the previous one.
+
+The fifth layer is a Conv2D layer with 128 filters of size (3, 3), followed by ReLU activation and 'same' padding.
+
+The sixth layer is an UpSampling2D layer that performs 2x2 upsampling of the feature maps.
+
+The seventh layer is a Conv2D layer with 64 filters of size (3, 3), followed by ReLU activation and 'same' padding.
+
+The eighth layer is another UpSampling2D layer, with the same parameters as the previous one.
+
+The ninth layer is a Conv2D layer with 32 filters of size (3, 3), followed by ReLU activation and no padding.
+
+The final layer is a Conv2D layer with 3 filters of size (3, 3), followed by ReLU activation and 'same' padding. The output of this layer is a denoised image with the same spatial dimensions as the input.
+
+The purpose of this model is also to learn a function that maps a noisy image to a denoised image, but it does so using a CNN architecture that is more suited to image processing tasks. The Conv2D and MaxPooling2D layers allow the model to learn local features of the input image, while the UpSampling2D layers increase the spatial resolution of the feature maps. The Conv2D layers at the end of the model produce the final denoised image.
+
+The loss function used in this model is binary cross-entropy, and the optimizer is Adam.
