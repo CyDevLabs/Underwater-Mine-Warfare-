@@ -11,6 +11,7 @@ The batch size is a hyperparameter in machine learning that refers to the number
 **1** TensorFlow was able to find 8 images in training dataset, 2 images in your validation dataset, and 2 images in your test dataset, and that the images belong to 2 different classes.
 
 **DAE_code1**
+
     The Flatten layer takes a tensor of shape (128, 128, 3) as input, and flattens it into a 1D tensor of shape (128 * 128 * 3,). This layer is needed because the subsequent layers are fully connected and require a 1D input.
 
     The Dense layer has 512 neurons with ReLU activation. This layer applies a linear transformation to the input tensor, followed by a Rectified Linear Unit (ReLU) activation function.
